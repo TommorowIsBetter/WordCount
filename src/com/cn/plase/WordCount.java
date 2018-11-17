@@ -46,7 +46,7 @@ public class WordCount {
  
 	public static void main(String[] args) throws Exception {		
 		Configuration conf = new Configuration();
- 
+		conf.set("dfs.client.use.datanode.hostname", "true");
 		String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
 		if (otherArgs.length != 2) {
 			System.err.println(otherArgs.length);
